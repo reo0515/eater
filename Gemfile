@@ -48,6 +48,9 @@ gem 'graphql'
 # Mount the GraphiQL IDE in Ruby on Rails.
 gem 'graphiql-rails'
 
+# The LINE Messaging API SDK for Ruby makes it easy to develop bots using LINE Messaging API, and you can create a sample bot within minutes
+gem 'line-bot-api'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
