@@ -15,23 +15,19 @@ class LinebotController < ApplicationController
     body = request.body.read
     events = client.parse_events_from(body)
 
-    events.each { |event|
+    events.each do |event|
       case event
       when Line::Bot::Event::Message
         case event.type
         when Line::Bot::Event::MessageType::Text
           message = {
             type: 'text',
-            text: response
+            text: event.message['text']
           }
-          client.reply_message(event['replyToken'], message)
-        when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
-          response = client.get_message_content(event.message['id'])
-          tf = Tempfile.open("content")
-          tf.write(response.body)
         end
       end
-    }
+      client.reply_message(event['replyToken'], message)
+    end
 
     head :ok
   end
@@ -40,9 +36,9 @@ class LinebotController < ApplicationController
 
   def client
     @client ||= Line::Bot::Client.new { |config|
-      # ローカルで動かすだけならベタ打ちでもOK。
-      config.channel_secret = "1657032274"
-      config.channel_token = "05171c25ad73d5d11d87a36713033a31"
+      config.channel_id = ENV["LINE_CHANNEL_ID"]
+      config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
+      config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
     }
   end
 
