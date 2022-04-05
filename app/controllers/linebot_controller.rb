@@ -1,15 +1,6 @@
 class LinebotController < ApplicationController
   require 'line/bot'
   protect_from_forgery except: :callback
-  # before_action :validate_signature, except: [:new, :create]
-
-  # def validate_signature
-  #   body = request.body.read
-  #   signature = request.env['HTTP_X_LINE_SIGNATURE']
-  #   unless client.validate_signature(body, signature)
-  #     error 400 do 'Bad Request' end
-  #   end
-  # end
 
   def callback
     body = request.body.read
