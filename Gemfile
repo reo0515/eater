@@ -51,6 +51,9 @@ gem 'graphiql-rails'
 # The LINE Messaging API SDK for Ruby makes it easy to develop bots using LINE Messaging API, and you can create a sample bot within minutes
 gem 'line-bot-api'
 
+# Easiest way to add multi-environment yaml settings to Rails. Read more: https://github.com/railsconfig/config
+gem 'config'
+
 # Storing configuration in the environment is one of the tenets of a twelve-factor app.
 gem 'dotenv-rails'
 
