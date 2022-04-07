@@ -54,6 +54,9 @@ gem 'line-bot-api'
 # Storing configuration in the environment is one of the tenets of a twelve-factor app.
 gem 'dotenv-rails'
 
+# Faraday is an HTTP client library abstraction layer that provides a common interface over many adapters
+gem 'faraday'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
