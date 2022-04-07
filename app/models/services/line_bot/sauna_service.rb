@@ -16,6 +16,7 @@ module Services
 
       def pick_nearby_sauna
         res = GoogleMapClient.new.fetch_nearby_places(@lat, @lon, 'サウナ')
+        p res
       end
 
     end
