@@ -60,6 +60,11 @@ gem 'dotenv-rails'
 # Faraday is an HTTP client library abstraction layer that provides a common interface over many adapters
 gem 'faraday'
 
+# Nokogiri (鋸) makes it easy and painless to work with XML and HTML from Ruby.
+# It provides a sensible, easy-to-understand API for reading, writing, modifying, and querying documents.
+# It is fast and standards-compliant by relying on native parsers like libxml2 (CRuby) and xerces (JRuby).
+gem 'nokogiri'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
