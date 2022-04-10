@@ -6,10 +6,10 @@ class LinebotController < ApplicationController
     body = request.body.read
     events = client.parse_events_from(body)
 
-    events.each { |event|
+    events.each do |event|
       message = Services::LineBot::BuildMessageService.new(event).invoke.result
-      # client.reply_message(event['replyToken'], message)
-    }
+      client.reply_message(event['replyToken'], message)
+    end
 
     head :ok
   end

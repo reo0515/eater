@@ -1,2 +1,5 @@
 google_map:
   url: https://maps.googleapis.com
+
+saunaikitai:
+  url: https://sauna-ikitai.com
