@@ -22,11 +22,13 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: eater_development
+  user: root
+  host: eater_db
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,6 +63,8 @@ development:
 test:
   <<: *default
   database: eater_test
+  user: root
+  host: eater_db
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,5 +89,5 @@ test:
 production:
   <<: *default
   database: eater_production
-  username: eater
+  username: root
   password: <%= ENV["EATER_DATABASE_PASSWORD"] %>
