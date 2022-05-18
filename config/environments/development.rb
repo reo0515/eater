@@ -70,4 +70,5 @@ Rails.application.configure do
 
   # ngrokによるActionDispatch::HostAuthorization middlewareを回避
   Rails.application.config.hosts << config.hosts << /[a-z0-9-]+\.ngrok\.io/
+  config.file_watcher = ActiveSupport::FileUpdateChecker
 end

@@ -28,8 +28,8 @@ development:
   <<: *default
   database: eater_development
   user: root
-  host: eater_db
-
+  password: password
+  host: db
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is

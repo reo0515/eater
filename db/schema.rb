@@ -10,23 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_02_083657) do
-
-  create_table "line_user", charset: "utf8", force: :cascade do |t|
+ActiveRecord::Schema[7.0].define(version: 2022_04_02_083657) do
+  create_table "line_user", charset: "utf8mb3", force: :cascade do |t|
     t.bigint "line_user_id"
     t.string "display_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "saunas", charset: "utf8", force: :cascade do |t|
+  create_table "saunas", charset: "utf8mb3", force: :cascade do |t|
     t.string "name"
     t.string "lat"
     t.string "lng"
     t.integer "rating"
     t.text "note"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
