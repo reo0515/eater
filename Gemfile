@@ -65,6 +65,9 @@ gem 'faraday'
 # It is fast and standards-compliant by relying on native parsers like libxml2 (CRuby) and xerces (JRuby).
 gem 'nokogiri'
 
+gem 'react-rails'
+gem 'webpacker'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
